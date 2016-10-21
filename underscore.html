@@ -1,0 +1,35 @@
+<script src="underscore.js"></script>
+<script>
+
+var ironman = {
+ name: "Tony Stark",
+ alias: "Iron Man"
+};
+
+var avengers_array = [
+ {name: "Tony Stark", alias: "Iron Man", ability: "flight"},
+ {name: "Bruce Banner", alias: "The Incredible Hulk", ability: "superhuman strength"},
+ {name: "Steve Rogers", alias: "Captain America", ability: "superhuman strength"},
+ {name: "Clint Barton", alias: "Hawkeye", ability: "superior hand-eye coordination"},
+ {name: "Thor Odinson", alias: "Thor", ability: "teleportation"},
+ {name: "Natasha Romanova", alias: "Black Widow", ability: "espionage"}
+];
+
+//.each()
+
+_.each(ironman, function(value, key) { 
+	alert(key + ': ' + value); 
+});
+// – A simple function that can iterate over objects or arrays and even do some manipulation
+
+
+//.map()
+
+var avengersAssemble = _.map(avengers_array, function(avenger){
+	return avenger;
+});
+//– Pushes each avenger object into a new array after funneling it through an optional transformation function
+
+
+</script>
+
