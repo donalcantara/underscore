@@ -21,7 +21,7 @@ var avengers_array = [
 _.each(ironman, function(value, key) { 
 	alert(key + ': ' + value); 
 });
-// – A simple function that can iterate over objects or arrays and even do some manipulation
+//A simple function that can iterate over objects or arrays and even do some manipulation
 
 
 //.map()
@@ -29,9 +29,26 @@ _.each(ironman, function(value, key) {
 var avengersAssemble = _.map(avengers_array, function(avenger){
 	return avenger;
 });
+
+//Pushes each avenger object into a new array after funneling it through an optional transformation function
+
+
+//.pluck()
+
+var avengerNames = _.pluck(avengers_array, 'name');
+
+//Often used with .map(). Returns or “plucks” only the values for the key specified as the second argument and places them in an array
+
+
+//.where()
+var superhumanStrengthAvengersArray = _.where(avengers_array, {ability: "superhuman strength"});
+
+//Returns an ARRAY of all values that contain a match to the key-value properties object
+
+
+
 console.log(avengersAssemble);
-//– Pushes each avenger object into a new array after funneling it through an optional transformation function
-
-
+console.log(avengerNames);
+console.log(superhumanStrengthAvengersArray);
 </script>
 
